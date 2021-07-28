@@ -1,0 +1,102 @@
+/*2// X-Small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+/*    logo top bar */
+    .TopBar__Left img{
+        max-width: 110px;
+    }
+
+/*    hero slider */
+    .hero__slider .carousel-inner .carousel-caption h1{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+/*    how it works*/
+    .howWork{
+        padding: 15% 0;
+    }
+
+/*    newsletter */
+    .newsletter{
+        padding: 20% 0;
+    }
+/*    footer css*/
+    .footer__section {
+        padding: 10% 0;
+    }
+
+    .benefit__contact__form .container {
+        padding-right: 8%;
+        padding-left: 8%;
+    }
+
+    .contact__info{
+        padding-top: 60%;
+    }
+}
+
+/*// Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+/*    about us */
+    .about__banner h1{
+        font-size:1.8rem;
+        font-weight: bold;
+    }
+    .about__banner p{
+        font-size: 1.2rem;
+    }
+
+/*    about us form */
+    .about__contact__form {
+        padding: 10% 0;
+    }
+
+/* benefit page */
+    .benefits__banner h1{
+        font-size:1.8rem;
+        font-weight: bold;
+    }
+
+    .benefits__banner p{
+        font-size: 1.2rem;
+    }
+
+
+    .solution__mid {
+        transform: unset;
+    }
+
+/*    */
+    .howWork__benefit{
+        padding: 20% 0;
+    }
+
+    .benefit__contact__form {
+        padding: 8% 0;
+    }
+}
+
+
+/*// Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+
+}
+
+/*// Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) { ... }
+
+/*// X-Large devices (large desktops, less than 1400px)*/
+@media (max-width: 1399.98px) { ... }
+
+
+
+@media (min-width: 992px){
+    .about__banner{
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+}
+
