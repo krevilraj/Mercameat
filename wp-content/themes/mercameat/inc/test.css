@@ -1,0 +1,1328 @@
+/*
+Theme Name: CB Portugal
+Theme URI: https://cbportugal.pt
+Author: Digital Connection
+Author URI: https://www.digitalconnection.pt/
+*/
+
+
+@font-face {
+    font-family: 'Geometos Neue';
+    src: url('../fonts/GeometosNeue.woff2') format('woff2'),
+    url('../fonts/GeometosNeue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geometos Neue';
+    src: url('../fonts/GeometosNeueBold.woff2') format('woff2'),
+    url('../fonts/GeometosNeueBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Light.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Semibold.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'),
+    url('../fonts/LibreBaskerville-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Std';
+    src: url('../fonts/HelveticaNeueLTStd-Th.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueLTStd-Th.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --primary-color:#012269;
+    --secondary-color:#be9d49;
+}
+
+.space{
+    margin-top: 50px;
+}
+
+body {
+    font-family: 'Geometos Neue';
+
+}
+
+
+/* ============================ Open top bar section ===================================== */
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: #012169;
+    z-index: 9;
+
+}
+.topheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 82px;
+}
+.logo-section {
+    padding: 0 37px;
+}
+.logo-section img{
+    width:100%;
+    height:auto;
+}
+.language-section{
+    color: #be9d49;
+    font-size: 15px;
+}
+
+.sidebar{
+    position: fixed;
+    left:-325px;
+    width: 250px;
+    height: 100%;
+    background:#012269;
+    transition: all .5s ease;
+    top: 0;
+    z-index: 99999;
+    animation: sidebar-ani .5s infinite;
+}
+
+@keyframes sidebar-ani{
+    0%{
+        box-shadow:  2px 3px 24px -9px rgba(24,66,160,0.4);
+        -webkit-box-shadow: 2px 3px 24px -9px rgba(24,66,160,0.4);
+        -moz-box-shadow: 2px 3px 24px -9px rgba(24,66,160,0.4);
+    }
+    100%{box-shadow: 12px 3px 25px -9px rgba(24,66,160,0.4);
+        -webkit-box-shadow: 12px 3px 25px -9px rgba(24,66,160,0.4);
+        -moz-box-shadow: 12px 3px 25px -9px rgba(24,66,160,0.4);}
+}
+.sidebar .toggle-logo{
+    background:#be9d49;
+    padding:20px;
+    user-select: none;
+}
+.sidebar ul{
+    padding-left:0;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    border-top: 1px solid #0b399d;
+    border-bottom: 1px solid #000;
+    transition: .4s;
+    text-decoration: none;
+    text-align: center;
+}
+.sidebar ul a:last-child{
+    border-bottom: none;
+}
+
+.sidebar ul li:hover a{
+    padding-left: 10px;
+}
+
+
+
+#check{
+    display: none;
+}
+label #menu-open{
+    /* left: 40px; */
+    /*   top: 25px; */
+    font-size: 28px;
+    color: #be9d49;
+    transition: all .5s;
+    cursor: pointer;
+    /*   position: fixed; */
+}
+label #menu-close{
+    z-index:1111;
+    left:-304px;
+    font-size: 20px;
+    color: #be9d49;
+    background: #012269;
+    padding:4px 9px;
+    transition: all .5s ease;
+    position: fixed;
+    top: 0;
+    border: 1px solid #be9d49;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+
+#check:checked ~ label #menu-open{
+    /*left: 250px;*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #menu-close{
+    left: 250px;
+}
+/* ========================== Close top bar section ====================================== */
+
+/* ========================== open hero section ====================================== */
+/* .hero-section{
+  height: 100vh;
+} */
+.hero-section {
+    background: url(../images/slider-banner.png) no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 24% 0;
+}
+.hero-caption {
+    /*   padding-top: 20%; */
+}
+
+.hero-caption .main-heading  h1{
+    font-size: 3.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.hero-caption .sub-heading  h2{
+    font-size: 2rem;
+    color: #be9d49;
+    letter-spacing: 3px;
+    padding-bottom: 2rem;
+    font-weight: bold;
+    font-family: 'Helvetica Neue LT Std';
+
+}
+.hero-caption .banner-btn a {
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    transition: .4s;
+    font-family: 'Libre Baskerville';
+}
+
+.hero-caption .banner-btn a:hover {
+    color: #be9d49;
+}
+
+.scroll-icon a {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    background: rgba(247, 247, 247, 0.8);
+    color: #012269;
+    animation: fadeInDown 2s linear infinite;
+    display: inline-block;
+    margin-left: -13px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    animation: down-arrow  2s infinite;
+}
+
+@keyframes down-arrow {
+    from { padding-top: 0px;}
+    to{ padding-top: 5px; }
+
+
+}
+
+
+/* ========================== close hero section ====================================== */
+
+/* ========================== open Everything, everywhere  section ====================================== */
+
+.everthing-section .everthing-left h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #012169;
+}
+.everthing-section .everthing-right p {
+    font-size: 1.5rem;
+    color: #262625;
+    font-family: 'Helvetica Neue LT Std';
+    line-height: 38px;
+}
+
+/* ========================== close Everything, everywhere  section ====================================== */
+/* ========================== open spotlight section ====================================== */
+.spotlight .heading{
+    margin-bottom: 25px;
+}
+.spotlight .heading h2{
+    color: #012269;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 11px;
+
+
+}
+
+.spotlight .heading h3{
+    color: #be9d49;
+    font-size: 2rem;
+    padding-left: 45px;
+    font-family: 'Helvetica Neue LT Std';
+
+
+}
+
+.spotlight-parent {
+    width: 100%;
+    position: relative;
+
+}
+
+.spotlight-child {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.spotlight-parent:hover .spotlight-child {
+    filter: blur(4px);
+}
+
+.spotlight-parent .spot-overlay {
+
+
+    /*    background: rgb(206,237,252);
+      background: linear-gradient(20deg, rgba(206,237,252,1) 0%, rgba(146,217,248,1) 0%, rgba(1,33,105,1) 0%, rgba(79,111,182,0.5690476874343487) 100%);  */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    transition: .3s ease;
+}
+
+.spotlight-parent:hover .spot-overlay{
+    -webkit-transform: scale(1);
+    -ms-trasnform: scale(1);
+    transform: scale(1);
+}
+
+.spot-overlay .spot-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    text-shadow: 4px 4px 5px #000000;
+}
+
+.spot-overlay .spot-text p{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+}
+
+.spot-overlay .spot-text h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+.spot-overlay .spot-text a{
+    text-transform: uppercase;
+
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: underline;
+    font-family: 'Libre Baskerville';
+}
+
+.spot-overlay .spot-text a:hover{
+    color:#c6a052;
+}
+
+/* ---spotlight single -----*/
+
+.spotlight-single{
+    width: 100%;
+    height: 30vh;
+    background:#be9d49;
+    position: relative;
+    color: #fff;
+}
+
+.heder-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.spotlight-single h2{
+
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+/*------ spotlight content page css this page is located inside template-part -- */
+
+.spot-singel {
+    padding-top:80px;
+}
+
+.entry-header-spot {
+    background:#be9d49;
+    color:#fff;
+    text-align:center;
+    padding:55px 0;
+}
+
+.entry-header-spot h1{
+    text-transform:uppercase;
+}
+.spot-image {
+    padding-top:55px;
+}
+.spot-s-content .entry-content p{
+    padding:30px 0;
+    font-size: 1.5rem;
+    color: #262625;
+    font-family: 'Helvetica Neue LT Std';
+    line-height: 38px;
+}
+/* ========================== close spotlight  section ====================================== */
+
+/* ========================== open choose your destination section ====================================== */
+.destination {
+    background-color: #012269;
+    color: #fff;
+    padding:40px 0;
+}
+.destination .destination-tab{
+    display: flex;
+    justify-content: space-around;
+}
+
+.destination  .heading {
+    padding-bottom: 25px;
+    padding-top: 55px;
+}
+
+.destination  .heading h2{
+    color:#fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 11px;
+
+}
+
+.destination  .heading h3{
+    color: #be9d49;
+    font-size: 2rem;
+    padding-left: 104px;
+    font-family: 'Helvetica Neue LT Std';
+
+}
+
+
+.destination-tab .nav-pills .nav-link{
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 68px;
+    font-family: 'Libre Baskerville';
+
+}
+.destination-tab .nav-pills .nav-link.active {
+    background: transparent;
+    border-bottom: 1px solid #be9d49;
+    border-radius: 0;
+    color: #be9d49;
+
+}
+.mobile-destination .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+/* ========================== close choose your destination section ====================================== */
+
+
+/* ========================== open city guides section ====================================== */
+
+.heading-bus{
+    position: relative;
+}
+.city-bus {
+    width: 100%;
+    max-width: 170px;
+    position: absolute;
+    right: 80%;
+    top: -12%;
+    animation: cityBus  30s infinite normal;
+}
+
+@keyframes  cityBus{
+    0%{ right: 0%;}
+    100%{right: 100%;}
+}
+
+.city-guides .heading{
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+.city-guides .heading h2{
+    color:#012269;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 11px;
+
+}
+.city-guides .heading h3{
+    color: #be9d49;
+    font-size: 2rem;
+    padding-left: 36px;
+    font-family: 'Helvetica Neue LT Std';
+
+}
+
+
+.cityguides-parent{
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+}
+.cityguides-child{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+.cityguides-parent:hover .cityguides-child, .cityguides-parent:focus .cityguides-child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.cityguides-parent:hover .cityguides-child:before, .spotlight-parent:focus .cityguides-child:before {
+    display: block;
+}
+
+.cityguides-parent:hover a, ..cityguides-parent:focus a {
+    display: block;
+}
+
+.cityguides-child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 34, 105, 0.51);
+
+}
+
+/* ========================== close city guides section ====================================== */
+
+
+/* ========================== open meet visit live section section ====================================== */
+
+/*.post-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+*/
+.meet-visit-live .meet .heading h2{
+    color:#012269;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 11px;
+
+}
+.meet-visit-live .meet .heading h3{
+    color: #be9d49;
+    font-size: 2rem;
+    padding-left: 36px;
+    font-family: 'Helvetica Neue LT Std';
+}
+
+.meet-visit-live .meet .meet-content p{
+    font-size: 1.2rem;
+    color: #262625;
+    font-family: 'Helvetica Neue LT Std';
+    line-height: 33px;
+    padding: 22px 0;
+}
+
+.info-post {
+    position: relative;
+    padding-bottom: 55px;
+}
+
+.info-post .hover-img{
+    position: absolute;
+    left: 4%;
+    width: 100%;
+    max-width: 87px;
+    top: -8px;
+    animation: post-hover-img 1s infinite;
+}
+
+@keyframes post-hover-img{
+
+    0%{ left:7%;}
+    40%{left: 6%;}
+    80%{left: 5%;}
+    100%{left: 4%;}
+
+}
+.info-post .info-btn a{
+    font-size: 1.2rem;
+    color: #012269;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: 'Libre Baskerville';
+}
+
+.info-post .info-btn a:hover{
+    color: #be9d49;
+}
+
+.meet-visit-live .visit .heading{
+    text-align: right;
+}
+.meet-visit-live .visit .heading h2{
+    color:#012269;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+
+}
+.meet-visit-live .visit .heading h3{
+    color: #be9d49;
+    font-size: 1.5rem;
+
+}
+.meet-visit-live .visit p{
+    text-align: right;
+
+}
+
+.info-right{
+    text-align: right;
+}
+
+.visit-wrapper{
+    width: 100%;
+    max-width: 407px;
+}
+
+.meet-visit-live .live .heading h2{
+    color:#012269;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+
+}
+.meet-visit-live .live .heading h3{
+    color: #be9d49;
+    font-size: 1.5rem;
+    padding-left: 36px;
+
+}
+
+
+
+.info-post:nth-child(2) .img-holder{
+    order:0;
+}
+.info-post:nth-child(2) .content-holder{
+    order:1;
+}
+
+.info-post:nth-child(2) .offset-md-1{
+    margin-left: 0;
+}
+
+
+
+
+/* ========================== close meet visit live section section ====================================== */
+
+
+
+.footer-section {
+    background-color:#012169;
+    padding-top:55px;
+}
+
+.footer-logo {
+    width: 100%;
+    max-width: 227px;
+}
+
+.footer-nav ul li a{
+    color:#fff;
+    font-size: 1.3rem;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+
+}
+
+.footer-nav ul li a:hover{
+    color: #be9d49;
+
+}
+
+.social-icons ul{
+    display: flex;
+}
+.social-icons ul li{
+    padding-right: 19px;
+}
+
+.social-icons ul li a{
+    color: #fff;
+    font-size: 27px;
+}
+
+
+.bottom-bar {
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.bottom-bar p{
+    font-family: 'Helvetica Neue LT Std';
+}
+
+
+
+/* media query */
+@media (max-width: 575.98px) {
+    .hero-caption {
+        padding-top: 41%;
+    }
+
+    .language-section{
+        display: none;
+    }
+
+    .meet-visit-live .visit .heading{
+        text-align: unset;
+    }
+
+    .meet-visit-live .visit p{
+        text-align: unset;
+    }
+    .info-right{
+        text-align: unset;
+    }
+
+
+    .destination .destination-tab {
+        display: flex;
+        flex-direction: column;
+    }
+    .destination-tab .nav-pills .nav-link {
+        line-height: unset;
+    }
+
+    .footer-logo {
+        margin: auto;
+    }
+
+    .footer-nav{
+        text-align: center;
+        padding: 55px 0;
+    }
+
+    .social-icons ul{
+        justify-content: center;
+    }
+
+    .slick-prev{
+        display:none;
+    }
+    .slick-next {
+        display:none;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    .info-post:nth-child(2) .img-holder{
+        order:1;
+    }
+    .info-post:nth-child(2) .content-holder{
+        order:0;
+    }
+
+
+}
+
+@media (max-width: 991.98px) { ... }
+
+@media (max-width: 1199.98px) { ... }
+
+
+
+/* ============= meet page  ========================== */
+
+.meet-section{
+    background: url(../images/meet-bg.png) no-repeat;
+    /*   height: 100vh; */
+    padding: 16% 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.scroll-icon-meet a {
+    position: absolute;
+    bottom: 31%;
+    left: 50%;
+    background: rgba(247, 247, 247, 0.8);
+    color: #012269;
+    animation: fadeInDown 2s linear infinite;
+    display: inline-block;
+    margin-left: -13px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    animation: down-arrow  2s infinite;
+}
+
+.join-us{
+    /*background: url(../images/join-us-bg.png) no-repeat; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.join-content {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.join-content h2 {
+    font-size: 3rem;
+    color: #fff;
+
+
+}
+
+.join-content h3{
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 2rem;
+    font-family: 'Helvetica Neue LT Std';
+
+
+}
+
+.join-content a{
+    font-size: 1.3rem;
+    color: #fff;
+    transition: .5s;
+    font-family: 'Libre Baskerville';
+
+}
+
+.join-content a:hover{
+
+    color:#012269;
+}
+
+
+/* ============= blog page ======================== */
+.blog-left ul{
+    display: flex;
+}
+ul.blog-info li{
+    color: #012269;
+    text-transform: uppercase;
+}
+
+.blog-main {
+    padding-top: 35px;
+}
+
+
+/* -------------  filter-category ----------------------- */
+/* SLIDER  SLICK CSS LOADED*/
+
+.filter {
+    margin: 1rem 0;
+}
+
+.active-filter {
+    margin: 1rem 0;
+}
+
+.slick {
+    /*   width: 400px; */
+}
+
+.slick .slide {
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+.slide .extra_detail{
+    display:block;
+    position:absolute;
+    color:#fff;
+    z-index:1111;
+    /* 	background: rgb(206,237,252);
+        background: linear-gradient(164deg, rgba(206,237,252,1) 0%, rgba(1,33,105,1) 0%, rgba(1,33,105,1) 0%, rgba(37,81,179,0.437395026369923) 100%); */
+
+    padding:40px;
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition:.3s ease;
+}
+
+.slide:hover .extra_detail{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    text-shadow: 2px 2px 16px rgba(150, 150, 150, 1);
+}
+.slide .image-part{
+    width: 100%;
+    height: 267px;
+    overflow: hidden;
+}
+
+.slide:hover .image-part{
+    filter: blur(4px);
+}
+.filter-category{
+    display:block;
+    text-align:center;
+}
+
+
+
+
+.filter-category a{
+    cursor:pointer;
+    padding:10px;
+    margin:10px;
+}
+
+.slick .extra_detail h2{
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px 0;
+
+}
+
+.slick .extra_detail a{
+    font-family: 'Libre Baskerville';
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.slick .extra_detail a:hover{
+    color:#be9d49;
+}
+
+
+.slick .extra_detail .extra-category{
+    font-size: 1.3rem;
+    font-family: 'Helvetica Neue LT Std';
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+/*------------------- */
+
+.filter-category a{
+    color:#012169;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration:none;
+    font-family: 'Libre Baskerville';
+}
+.filter-category a:hover{
+    text-decoration:underline;
+
+}
+
+.slick-prev {
+    background: #012269;
+    position: absolute;
+    right: 101px;
+    top: -25px;
+    border-radius:8px;
+    outline: none;
+    border: none;
+    color:#fff;
+    height: 24px;
+    width: 27px;
+    text-align: center;
+
+}
+
+.slick-next  {
+    background: #012269;
+    position: absolute;
+    right: 62px;
+    top: -25px;
+    border-radius:8px;
+    outline: none;
+    border: none;
+    color:#fff;
+    height: 24px;
+    width: 27px;
+    text-align: center;
+}
+
+
+/* --------------------- single page css ------------------------- */
+.single-page-header {
+    background:url(../../../../uploads/2021/03/blog-bg.png);
+    background-repeat:no-repeat;
+    background-position:center top;
+    background-size:cover;
+    padding: 17% 0;
+    position:relative;
+}
+.single-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50% , -50%);
+    -webkit-transform:translate(-50% , -50%);
+    -ms-transform:translate(-50% , -50%);
+}
+.single-content h1{
+    color:#fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.blog-main img{
+    width:100%;
+    height:auto;
+}
+
+.blog-main  h1 , .blog-main  h2 , .blog-main h3 , .blog-main h4  , .blog-main h5 , .blog-main h6 , .blog-main b  , .blog-main strong {
+    color:#012169;
+    font-family: 'Source Sans Pro';
+    font-size:2rem;
+}
+.blog-main  p{
+    font-family: 'Source Sans Pro';
+    font-size:1.3rem;
+}
+.recent-add h2{
+    color: #012269;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin:0;
+}
+.blog-left ul {
+    padding:0;
+}
+
+.recent-add .heading h3 {
+    color: #be9d49;
+    font-size: 2rem;
+    padding-left: 45px;
+    font-family: 'Helvetica Neue LT Std';
+}
+.list-of-post ul{
+    padding:0;
+}
+.list-of-post ul li {
+    padding-top:20px;
+    font-family: 'Libre Baskerville';
+    font-size:1.3rem;
+
+
+}
+.list-of-post ul li a{
+    color:#012169;
+    text-decoration:none;
+    transition:.3s ease;
+
+}
+
+.list-of-post ul li a:hover{
+    color:#be9d49;
+
+
+}
+
+
+/*  =============== Comment section css ============================== */
+.comments-area h2{
+    font-size:1.3rem;
+    color:#011c61;
+    background: #dfdfdf;
+    padding: 10px 50px;
+    border-top: 3px solid #000;
+    margin-bottom:32px;
+
+}
+.comments-area .comment-author img{
+    border-radius:100px;
+}
+.comments-area .comment-author
+{
+    margin-bottom: 22px;
+}
+.comments-area .comment-author a{
+    color:#000;
+    padding-left:25px;
+}
+
+.comments-area .comment-metadata a{
+    color:#8b8b8b;
+    text-transform:normal;
+    font-size:1rem;
+    font-family: 'Source Sans Pro';
+}
+
+.comments-area .comment-content p{
+    font-family: 'Source Sans Pro';
+    text-align: justify;
+    font-size:1.2rem;
+}
+.comment-body {
+    margin-bottom:47px;
+}
+
+.comments-area  .reply a{
+    color:#012169;
+    font-size:1rem;
+}
+
+
+.comment-respond h3{
+    color:#012269;
+    font-family: 'Libre Baskerville';
+    text-transform:uppercase;
+    font-size: 1.5rem;
+}
+.comment-form p.comment-notes{
+    color: #5f5f62;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+}
+
+.comment-form-comment textarea {
+    resize:none;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid #4a4545;
+    outline:none;
+    background: transparent;
+
+}
+
+.comment-form-comment {
+    margin-top:50px;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+}
+
+{
+
+}
+/* .comment-form-comment  label{
+	display:none;
+} */
+.comment-form-author label , .comment-form-email  label , .comment-form-url label {
+    color:#000;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+}
+.comment-form-cookies-consent label{
+    color:#000;
+    font-size: 16px;
+    font-family: 'Source Sans Pro';
+}
+.form-submit {
+    text-align:right;
+}
+
+.comment-form-author input{
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #4a4545;
+    outline:none;
+    background: transparent;
+    color:#011c61;
+    font-family: 'Source Sans Pro';
+}
+.comment-form-author{
+    margin-top: 30px;
+}
+
+.comment-form-email input{
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #4a4545;
+    outline:none;
+    background: transparent;
+    color:#011c61;
+    font-family: 'Source Sans Pro';
+}
+.comment-form-email
+{
+
+    margin-top: 30px;
+
+}
+
+.comment-form-url input {
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #4a4545;
+    outline:none;
+    background: transparent;
+    color:#011c61;
+    font-family: 'Source Sans Pro';
+}
+
+.comment-form-url
+{
+    margin-top: 30px;
+
+}
+
+
+
+.form-submit .submit{
+    background:transparent;
+    border:none;
+    border-bottom: 2px solid #011c61;
+}
+
+
+@media (max-width: 575.98px) {
+    .scroll-icon-meet a{
+        bottom: 42%;
+    }
+    .hero-caption {
+        padding-top: 17%;
+        padding-bottom: 19%;
+    }
+
+    .scroll-icon a{
+        bottom: 30%;
+    }
+
+    .slick-prev , .slick-next{
+        top: -109px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+    .scroll-icon-meet a{
+        bottom: 55%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

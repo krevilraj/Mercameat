@@ -1,0 +1,943 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Recursive', sans-serif;
+}
+
+:root{
+    --main-color:#A34300;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+p{
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+/* =============================================
+       Top Section Open
+================================================== */
+.TopBar__container{
+    display: flex;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 12px;
+}
+.TopBar__Left img{
+    max-width: 200px;
+}
+
+.TopBar__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.TopBar__right .TopBar__user{
+    display: inline-block;
+    margin-right: 25px;
+}
+.TopBar__right .TopBar__checkout{
+    display: inline-block;
+    margin-right: 25px;
+    position: relative;
+}
+.TopBar__right .TopBar__search{
+    display: inline-block;
+    margin-right: 25px;
+}
+.TopBar__container i{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.TopBar__checkout span.checkout_items{
+    background: #e92c30;
+    color: #fff;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: -11px;
+    left: 8px;
+    font-size: 14px;
+}
+
+.navbar {
+    cursor: pointer;
+}
+.scroll-nav {
+    background-color: var(--main-color);
+    transition: .8s all;
+    box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.77);
+    -webkit-box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.77);
+    -moz-box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.77);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+.scroll-nav  .TopBar__Left img{
+    max-width: 100px;
+}
+
+.offcanvas-body{
+    background: #fff;
+}
+
+.offcanvas-body ul li a{
+    color: #000;
+
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.offcanvas-header {
+    background: var(--main-color);
+}
+.offcanvas-header p{
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-nav >  .nav-item {
+    margin-bottom: 10px;
+}
+.navbar-nav >  .nav-item > a{
+    transition: background 0.5s ease;
+    text-transform: uppercase;
+}
+.navbar-nav >  .nav-item > a.active{
+    background: #fff;
+    color: var(--main-color);
+
+}
+
+.navbar-nav > .nav-item > a.nav-link:hover{
+    background: white;
+    color: var(--main-color);
+}
+
+.navbar-nav > .nav-item > a.nav-link:focus{
+   color: var(--main-color);
+    background: transparent;
+  }
+
+.offcanvas-body .navbar-nav {
+    padding-top: 25px;
+}
+
+    /* =============================================
+           Top Section Close
+    ================================================== */
+/* =============================================
+       hero__slider   Open
+================================================== */
+
+
+.hero__slider .carousel-inner .carousel-caption h1{
+    font-weight: bold;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+}
+.hero__slider .carousel-inner .carousel-caption{
+    top: 30%;
+    bottom: 70%;
+}
+.hero__slider .carousel-inner .carousel-caption a{
+    background: var(--main-color);
+    color: #fff;
+    padding:10px 20px ;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+}
+.hero__slider .carousel-inner .carousel-caption a:hover{
+    background: #ba5007;
+
+}
+/* =============================================
+     hero__slider  Close
+================================================== */
+/* =============================================
+     PRODUCTS Open
+================================================== */
+.product {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+section.product .product__item__wrapper>div{
+    display:none;
+}
+section.product .product__item__wrapper>div.active{
+    display:block;
+}
+.add_to_cart_button.added{
+    display:none;
+}
+.add_to_cart_button.loading{
+    opacity:0.7;
+}
+.product .product__heading h2{
+  text-align: center;
+}
+#product__tab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+#product__tab a{
+    font-size: 1.2rem;
+    color: #000;
+    text-transform: uppercase;
+}
+#product__tab a.active{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+#product__tab a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+#product__tab .product__tab__name{
+    padding: 15px 25px;
+}
+
+.product .product__item {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.product .product__item p{
+    color: #7A7A7A;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.product .product__item h3 a{
+    font-size: 18px;
+    font-weight: bold;
+    color:#212529;
+}
+.product .product__item h4{
+    font-size: 1.3rem;
+}
+.product__item .add_to_cart_button{
+    background: var(--main-color);
+    color: #fff;
+    padding: 7px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all;
+}
+.product__item a:hover{
+    background: #ba5007;
+}
+
+.product__item:hover  a{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+/* =============================================
+     PRODUCTS  Close
+================================================== */
+
+
+/* =============================================
+    HOW IT WORKS? Section Open
+================================================== */
+.howWork {
+    background-image: url("../images/how-work.png");
+    background-position: center bottom;
+    background-size: cover;
+    padding: 5% 0;
+}
+
+.howWork  .product__heading h2{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.howWork .nav{
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.howWork  .work__process img{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+
+}
+
+.work__icon {
+    padding: 20px;
+    background: var(--main-color);
+    border-radius: 150px;
+    height: 150px;
+    width: 150px;
+    line-height: 110px;
+    margin: 0 auto;
+}
+
+.work__process {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.howWork  .work__process h5{
+    color: #fff;
+    padding-top: 25px;
+}
+.howWork  .work__process p{
+    color: #fff;
+}
+
+.work__list__main {
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 55px;
+}
+
+.howWork   .nav-pills .nav-link.active {
+    background: unset;
+    color: var(--main-color);
+    text-decoration: underline;
+
+}
+
+.howWork   .nav-pills .nav-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+/* =============================================
+    HOW IT WORKS? Section Close
+================================================== */
+
+/* =============================================
+   Footer two images  Member Section Open
+================================================== */
+.member__section {
+
+}
+
+.member__section h2{
+    color: #fff;
+}
+.member__section .container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.become__supplier {
+    padding: 20% 0;
+
+}
+
+.become__transporter{
+    padding: 20% 0;
+
+}
+
+a.member__btn {
+    background: var(--main-color);
+    color: #fff;
+    padding: 7px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.3s all;
+}
+a.member__btn:hover{
+    background: #ba5007;
+}
+
+.member__dec {
+    padding-left: 11%;
+}
+
+
+/* =============================================
+   Footer two images Member Section Close
+================================================== */
+
+
+
+/* =============================================
+    Newsletter Section Open
+================================================== */
+.newsletter {
+    background-image: url("../images/newsletter-bg.png");
+    padding: 3% 0;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.newsletter .product__heading h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.newsletter .product__heading h4{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-bottom: 30px;
+}
+
+.newsletter form {
+    width: 100%;
+
+}
+.newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+.newsletter .content h2 {
+    color: #243c4f;
+    margin-bottom: 40px; }
+.newsletter .content .form-control {
+    height: 50px;
+    border-color: var(--main-color);
+    border-radius:0;
+    background: transparent;
+    color: #fff;
+}
+.newsletter .content .form-control:focus {
+   box-shadow: unset !important;
+    border: 2px solid var(--main-color);
+}
+
+
+.newsletter .content .btn {
+    min-height: 50px;
+    border-radius:0;
+    background: var(--main-color);
+    color: #fff;
+    font-weight:600;
+}
+.newsletter  .form-check{
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.newsletter  .form-check label{
+    color: #fff;
+}
+
+.newsletter  .form-check label a{
+    color: #fff;
+}
+
+.newsletter  .form-check label a:hover {
+    color: var(--main-color);
+}
+
+
+/* =============================================
+    Newsletter  Section Close
+================================================== */
+
+
+/* =============================================
+    footer   Section Open
+================================================== */
+.footer__section {
+    background: var(--main-color);
+    padding: 2% 0;
+}
+
+.footer__section  .footer__nav ul.nav__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer__nav ul.nav__footer li a{
+    color: #fff;
+    padding-right:60px;
+    transition:0.8s all;
+    display: inline-block;
+    margin-bottom: 16px;
+
+}
+
+.footer__nav ul.nav__footer li a:hover{
+    text-decoration: underline;
+}
+.footer__section  .contact_info p{
+   line-height: 16px;
+
+}
+.footer__section  .contact_info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.btm__footer p {
+    margin-bottom: 0;
+}
+
+.footer__main .social__media ul{
+    display: flex;
+    justify-content: center;
+}
+.footer__main .social__media ul li {
+    padding-right: 20px;
+
+}
+
+.footer__main .social__media ul li a{
+    color: var(--main-color);
+    font-size: 1.1rem;
+    height: 40px;
+    width: 40px;
+    background: black;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 40px;
+    line-height: 20px;
+    text-align: center;
+    transition: .5s ease-out;
+}
+
+.footer__main .social__media ul li a:hover{
+    transform: rotate(20deg);
+    background: #fff;
+}
+/* =============================================
+    footer  Section Close
+================================================== */
+
+/* ================================================
+=====================================================
+------------ ABOUT US PAGE -----------------------------
+============================================================
+============================================================= */
+
+/* =============================================
+    about banner  Section Open
+================================================== */
+.about__banner {
+    background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%), url("../images/about-us/about-banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.about__banner h1{
+    color: #fff;
+    font-size: 4rem;
+}
+
+.about__banner p{
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.about__banner  a{
+    background: var(--main-color);
+    color: #fff;
+    padding: 15px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.3s all;
+}
+.about__banner  a:hover{
+    background: #ba5007;
+}
+
+
+
+/* =============================================
+    about banner   Section Close
+================================================== */
+
+
+/* =============================================
+
+our strategy and skill  Section Open
+================================================== */
+
+.about__rule .rules{
+    padding: 10%;
+}
+
+.about__rule .rules h2 {
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+.about__rule .rules h2,.about__rule .rules p{
+    color: #fff;
+}
+
+.about__rule .rules p {
+    font-size: 1.2rem;
+}
+
+/* =============================================
+
+our strategy and skill  Section Close
+================================================== */
+/* =============================================
+
+ solution Section Open
+================================================== */
+
+.solution {
+    background-image: url("../images/about-us/solution.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10% 0;
+}
+
+.solution .solution__heading h2{
+    color: #fff;
+}
+
+.solution .solution__heading p{
+    color: #fff;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.solution .solution__icon {
+    padding: 10%;
+}
+.solution .solution__icon p{
+    color: #fff;
+}
+.solution .solution__icon img{
+    max-width: 100px;
+    margin: 0 auto;
+
+}
+
+
+.solution__mid {
+    transform: scale(1.1);
+}
+
+/* =============================================
+
+ solution Section Close
+================================================== */
+
+/* =============================================
+
+ Contact Form Section Open
+================================================== */
+.about__contact__form {
+    padding: 3% 0;
+}
+.about__contact__form .container{
+    padding-right: 15%;
+    padding-left: 15%;
+
+}
+
+.about__contact__form  .about__from__heading p{
+    text-transform: uppercase;
+}
+.btn__about__from {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.btn__about__from:hover{
+    color: #fff;
+    background: #ba5007;
+}
+
+.con__ab__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__about textarea.form-control {
+    resize: none;
+}
+/* =============================================
+
+ Contact Form Section Close
+================================================== */
+
+
+/* ================================================
+=====================================================
+------------ BENEFITS PAGE -----------------------------
+============================================================
+============================================================= */
+/* =============================================
+  benefits Section Open
+================================================== */
+.benefits__banner {
+    background-image: url("../images/benefits/benefits-banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.benefits__banner h1{
+    color: #fff;
+    font-size: 4rem;
+}
+.benefits__banner p{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.benefits__banner  a{
+    background: var(--main-color);
+    color: #fff;
+    padding: 15px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.3s all;
+}
+.benefits__banner  a:hover{
+    background: #ba5007;
+}
+.benefit__toggle ul li img{
+    max-width: 30px;
+   margin-right: 20px;
+}
+.benefit__toggle ul li .benefit__list__item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.benefit__toggle ul li{
+    padding-bottom: 25px;
+}
+
+.benefit__toggle ul li:last-child{
+    padding-bottom: 0;
+}
+.benefit__toggle ul {
+    padding-top: 25px;
+}
+.benefit__toggle ul li p{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: none;
+}
+.benefit__toggle ul li p.active{
+    display: block;
+}
+
+.befefits__row {
+    padding-top: 55px;
+    align-items: center;
+}
+
+.benefits{
+    padding: 55px 0;
+    background: #fff;
+}
+
+/* =============================================
+    HOW IT WORKS? Section Open
+================================================== */
+.howWork__benefit{
+    background-image: url("../images/benefits/howwork.png");
+    background-position: center top;
+    background-size: cover;
+    padding: 5% 0;
+}
+
+.howWork__benefit .product__heading h2{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.howWork__benefit  .work__process img{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+
+}
+
+.howWork__benefit .work__icon {
+    padding: 20px;
+    background: var(--main-color);
+    border-radius: 150px;
+    height: 150px;
+    width: 150px;
+    line-height: 110px;
+    margin: 0 auto;
+}
+
+.howWork__benefit .work__process {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.howWork__benefit  .work__process h5{
+    color: #fff;
+    padding-top: 25px;
+}
+.howWork__benefit .work__process p{
+    color: #fff;
+}
+
+/* =============================================
+    HOW IT WORKS? Section Close
+================================================== */
+
+.benefit__contact__form {
+    padding: 3% 0;
+}
+
+.benefit__contact__form .container {
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.benefit__contact__form  .benefit__from__heading p{
+    text-transform: uppercase;
+}
+
+
+
+
+/* =============================================
+ benefits Section  Close
+================================================== */
+.contact__page {
+    background-image: url("../images/contact/contact__banner.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 80vh;
+    background-attachment: fixed;
+}
+
+
+.contact__page__form{
+    position: absolute;
+   top: 30%;
+    right: 10%;
+    left: 10%;
+}
+
+.con__form__page {
+    background: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.contact__page .contact__page__heading {
+    text-align: center;
+    padding-bottom: 55px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact__page .contact__page__heading h2{
+    color: #fff;
+    font-size: 3rem;
+}
+.contact__page .contact__page__heading p{
+    color: #fff;
+    font-size: 1.4rem;
+
+}
+
+
+.btn__contact__from {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.btn__contact__from:hover{
+    color: #fff;
+    background: #ba5007;
+}
+
+.con__conn__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* contact info */
+
+.contact__info {
+    background-image: url("../images/contact/contact-info-bg.png");
+    background-position: center;
+    background-size: cover;
+
+    padding-top: 13%;
+    padding-bottom: 10%;
+
+}
+
+.contact__info p{
+    padding-top: 25px;
+    font-size: 1.3em;
+}
+
+.con__info__main img{
+    max-width: 80px;
+}
+.con__info__main {
+    position: relative;
+    padding-top: 150px;
+    color: #fff;
+}
+
+/* ================================================
+=====================================================
+------------ BENEFITS PAGE -----------------------------
+============================================================
+============================================================= */

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Collapsible sidebar using Bootstrap 4</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="fontawesome-5/css/fontawesome.css">
+  <link rel="stylesheet" href="fontawesome-5/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+  <link rel="stylesheet" href="flexslider/flexslider.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div>
+      <div id="dismiss">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+
+      <div class="sidebar-header">
+        <h3><img src="images/footer-logo.png" alt="logo" class="logo"></h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="#">Home 1</a>
+            </li>
+            <li>
+              <a href="#">Home 2</a>
+            </li>
+            <li>
+              <a href="#">Home 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About</a>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Page 1</a>
+            </li>
+            <li>
+              <a href="#">Page 2</a>
+            </li>
+            <li>
+              <a href="#">Page 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Page Content  -->
+  <div id="content">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <span class="burger">
+                        <img src="images/burger.png" id="sidebarCollapse" alt="">
+                    </span>
+
+        <a href="http://localhost:8888/Mercameat/" class="custom-logo-link" rel="home" aria-current="page"><img
+            width="441" height="383" src="http://localhost:8888/Mercameat/wp-content/uploads/2021/04/logo.png"
+            class="custom-logo" alt="Mercameat"></a>
+        <div class="extra-info">
+
+
+          <ul class="cart-info">
+            <li>
+              PT | EN
+            </li>
+            <li>
+              <img src="images/cart.png" height="84" width="69"/>
+            </li>
+            <li>
+
+              <img src="images/search.png" height="69" width="69"/></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="slider">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="images/slider.jpg" class="img-fluid wp-post-image" alt="" class="img-fluid"
+                 loading="lazy"/>
+            <div class="xcontainer-fluid">
+              <div class="slider-details-container">
+                <div class="slider-title">
+                  <h2>A cuidar de Si
+                    e do planeta</h2>
+                </div>
+                <div class="slider-description">
+                  <a class="link"
+                     href="#">SABER MAIS</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="images/slider.jpg" class="img-fluid wp-post-image" alt="" class="img-fluid"
+                 loading="lazy"/>
+            <div class="xcontainer-fluid">
+              <div class="slider-details-container">
+                <div class="slider-title">
+                  <h2>A cuidar de Si
+                    e do planeta</h2>
+                </div>
+                <div class="slider-description">
+                  <a class="link"
+                     href="#">SABER MAIS</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-item pro-cat">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 notices-title">
+            <h2 class="heading2">Produto <br/>Green</h2>
+            <p>Produtos a pensar em todos.</p>
+
+            <div class="filter-category">
+              <div>
+                <a data-filter="*" class="filter-radio active">VER TODOS </a>
+              </div>
+              <div><a data-filter=".live" class="filter-radio">Green protect</a></div>
+              <div><a data-filter=".meet" class="filter-radio">Green care</a></div>
+              <div><a data-filter=".visit" class="filter-radio">Green Active</a></div>
+
+
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="slick cat-wrapper">
+              <div class="cat-item slide live">
+                <div class="cat-image">
+                  <img src="images/product/p1.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                  <a href="#">ADICONAR</a>
+                </div>
+              </div>
+              <div class="cat-item slide meet">
+                <div class="cat-image">
+                  <img src="images/product/p2.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                  <a href="#">ADICONAR</a>
+                </div>
+              </div>
+              <div class="cat-item slide visit">
+                <div class="cat-image">
+                  <img src="images/product/p3.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                  <a href="#">ADICONAR</a>
+                </div>
+              </div>
+              <div class="cat-item slide meet">
+                <div class="cat-image">
+                  <img src="images/product/p1.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                  <a href="#">ADICONAR</a>
+                </div>
+              </div>
+              <div class="cat-item slide live">
+                <div class="cat-image">
+                  <img src="images/product/p1.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                  <a href="#">ADICONAR</a>
+                </div>
+              </div>
+              <div class="cat-item slide meet">
+                <div class="cat-image">
+                  <img src="images/product/p2.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                </div>
+              </div>
+              <div class="cat-item slide live">
+                <div class="cat-image">
+                  <img src="images/product/p3.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                </div>
+              </div>
+              <div class="cat-item slide visit">
+                <div class="cat-image">
+                  <img src="images/product/p1.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="cat-title">GREEN PROTECT</p>
+                  <h3>Pack Bidon 5L
+                    e Borrifador 1L</h3>
+                  <p>0,00€</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-item notices">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 notices-title">
+            <h2 class="heading1">Green Living</h2>
+            <a href="#" class="mb-3">VER MAIS</a>
+          </div>
+          <div class="col-md-10">
+            <div class="notice-wrapper">
+              <div class="notice-item">
+                <div class="notice-image">
+                  <img src="images/notices/notice1.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="notice-date">19 MARÇO 2021</p>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam officiis possimus recusandae.
+                    Accusamus ducimus esse maxime perspiciatis quam reprehenderit sint!</p>
+                </div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-image">
+                  <img src="images/notices/notice2.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="notice-date">19 MARÇO 2021</p>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam officiis possimus recusandae.
+                    Accusamus ducimus esse maxime perspiciatis quam reprehenderit sint!</p>
+                </div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-image">
+                  <img src="images/notices/notice1.png"/>
+                </div>
+                <div class="notice-info">
+                  <p class="notice-date">19 MARÇO 2021</p>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam officiis possimus recusandae.
+                    Accusamus ducimus esse maxime perspiciatis quam reprehenderit sint!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="client-info section-item">
+      <div class="">
+        <div class="client-wrapper">
+          <div class="client-img pb-2 pt-2">
+            <img src="images/info/info1.png" class="img-fluid"/>
+          </div>
+          <div class="client-img pb-2 pt-2">
+            <img src="images/info/info2.png" class="img-fluid"/>
+          </div>
+          <div class="client-img pb-2 pt-2">
+            <img src="images/info/info3.png" class="img-fluid"/>
+          </div>
+          <div class="client-img pb-2 pt-2">
+            <img src="images/info/info4.png" class="img-fluid"/>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-item gamas">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="heading1">
+              Gamas
+            </h2>
+            <p>
+              Produtos 100% nacionais, com o objetivo não só a
+              proteção individual como a preservação e proteção
+              do mundo, os nosso produtos são ecológicos, sem
+              ingredientes sintéticos e vegans.
+            </p>
+            <div class="gamas-product">
+              <h2>Green &nbsp;&nbsp;care</h2>
+              <img src="images/gamas1.png" height="2136" width="2092"/>
+              <a href="#">SABER MAIS</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gamas-product">
+              <h2>Green &nbsp;&nbsp;care</h2>
+              <img src="images/gamas2.png" height="2136" width="2092"/>
+              <a href="#">SABER MAIS</a>
+            </div>
+            <div class="gamas-product">
+              <h2>Green &nbsp;&nbsp;care</h2>
+              <img src="images/gamas3.png" height="2136" width="2092"/>
+              <a href="#">SABER MAIS</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="clientes section-item">
+      <div class="container">
+
+        <h2 class="heading1">
+          Clientes
+        </h2>
+        <div class="client-item row">
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c1.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c2.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c3.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c4.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c5.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c6.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c7.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-3 col-sm-6 col-sm-6 col-lg-3 clientes-img pb-2 pt-2">
+            <img src="images/client/c8.png" class="img-fluid"/>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="instagram-feed  section-item">
+      <div class="container">
+
+        <h2>#greenworld</h2>
+        <div class="instagram-items">
+          <div class="item">
+
+            <img src="images/i1.png"/>
+          </div>
+          <div class="item">
+
+            <img src="images/i2.png"/>
+          </div>
+          <div class="item">
+
+            <img src="images/i3.png"/>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 pb-2 pt-2">
+            <img src="images/footer-logo.png" class="footer-logo"/>
+          </div>
+          <div class="col-md-4  pb-2 pt-2">
+            <p>
+              AV. ENG. DUARTE PACHECO,
+              TORRE 1, 1070-101 LISBOA</p>
+            <p>
+              INFO@Mercameat.PT
+            </p>
+          </div>
+          <div class="col-md-4 my-auto">
+            <ul class="social-link">
+              <li><span id="c_fb"></span><a href="https://fb.com>"><i class="fab fa-facebook"></i></a></li>
+              <li><span id="c_instagram"></span><a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+<div class="overlay"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.js"
+        integrity="sha512-Vl3LfTwTl2UYaupOww2SD1ng4ZSOrLYc1Pnag6KCipvEy9Be4KSmeFH8KnX6FcURxeZufGUKxOO77EsfzT/4Zg=="
+        crossorigin="anonymous"></script>
+
+<script src="js/bootstrap.js"></script>
+
+
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="flexslider/flexslider.js"></script>
+<script src="flexslider/jquery.flexslider-min.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+
+
+    $('.notice-wrapper').slick({
+      accessibility: false,
+      arrows: false,
+      centerPadding: '20px',
+      draggable: true,
+      easing: 'linear',
+      infinite: false,
+      slidesToShow: 2.3,
+      variableWidth: false,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+          }
+        }
+      ]
+
+    });
+
+    $("#sidebar").mCustomScrollbar({
+      theme: "minimal"
+    });
+
+    $('#dismiss, .overlay').on('click', function () {
+      $('#sidebar').removeClass('active');
+      $('.overlay').removeClass('active');
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').addClass('active');
+      $('.overlay').addClass('active');
+      $('.collapse.in').toggleClass('in');
+      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+  });
+
+
+</script>
+
+<!--/*************** for filter category *******************/-->
+<script src="slick/slick.min.js"></script>
+<script>
+  $(document).ready(function () {
+
+    $('.filter-radio').on('click', function () {
+      var propty = $(this);
+      $('.filter-radio').removeClass('active');
+      propty.addClass('active');
+      var cvalue = propty.attr("data-filter");
+      $('.cat-wrapper').slick('slickUnfilter');
+      $('.cat-wrapper').slick('slickFilter', cvalue);
+    });
+    $('.cat-wrapper').slick({
+      accessibility: false,
+      arrows: false,
+      centerPadding: '20px',
+      draggable: true,
+      easing: 'linear',
+      infinite: false,
+      slidesToShow: 3.1,
+      variableWidth: false,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3.1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+          }
+        }
+      ]
+
+    });
+  });
+</script>
+</body>
+
+</html>
+
+<script>
+  jQuery(document).ready(function(a){
+
+
+    var f=window.innerWidth;
+
+
+    if(992>f&&(a(".slideSectors .owl-item").css("width",f),
+    a("article.element-item").length&&a("article.element-item").each(function(){
+      a(this).find(".svc-col-md-4").removeClass("svc-col-sm-4 svc-col-xs-4").addClass("svc-col-xs-12 svc-col-sm-12"),
+        a(this).find(".svc-col-md-8").removeClass("svc-col-sm-8 svc-col-xs-8").addClass("svc-col-xs-12 svc-col-sm-12").css("padding-left",0)
+    }),
+
+    a(".taphover").length&&a(".taphover").on("click",function(a) {
+      a.preventDefault();
+
+      var b = a.currentTarget.href;
+      setTimeout(function () {
+
+        window.location.href = b
+
+      }, 1e3), console.log('')
+
+    })))
+
+      if(a(".fp-slidesContainer").length){
+        var g=a(".fp-slidesContainer"),
+          h=a(".fp-controlArrow.fp-prev"),
+          i=a(".fp-controlArrow.fp-next");
+        h.addClass("fa fa-angle-left"),
+          i.addClass("fa fa-angle-right"),
+          g.each(function(){
+            var b=a(this).children().length;3==b?a(this).addClass("three-elements"):4==b&&a(this).addClass("four-elements")
+          })
+      }
+
+    });
+
+</script>

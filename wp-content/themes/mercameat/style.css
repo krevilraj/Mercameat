@@ -1,0 +1,255 @@
+/*
+Theme Name: Mercameat
+Theme URI: http://digitalconnection.pt
+Author: Digital Connection
+Author URI: http://digitalconnection.pt
+Description: Mercameat is a compatible WooCommerce theme made with WordPress. It is the best theme for you to sell cosmetic goods, beautifuly designed and fully responsive.
+Version: 1.0
+Text-domain: mercameat
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
+*/
+
+@import "assets/css/custom.css";
+@import "assets/css/responsive.css";
+
+.navbar-nav li a {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-nav li a {
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------
+    minicart
+----------------------------------------------------- */
+.widget_shopping_cart_content dl.variation{
+    display:none;
+}
+.widget_shopping_cart_content{
+    background: #fff;
+}
+.mini-wrapper{
+    position: absolute;
+    right: -48px;
+    z-index: 99;
+}
+.cart-mini .cart_list{
+    padding:0;
+}
+.widget_shopping_cart_content p.woocommerce-mini-cart__total{
+    clear: both;
+}
+.widget_shopping_cart_content{
+    padding:15px;
+    margin-top:14px;
+}
+.widget_shopping_cart_content .woocommerce-mini-cart-item{
+    position:relative;
+    max-width:300px;
+    padding:10px;
+    margin-left:0;
+    margin-bottom:10px;
+    clear:both;
+    list-style-type: none;
+}
+.widget_shopping_cart_content .woocommerce-mini-cart-item img{
+    width:80px !important;
+    margin-right:10px;
+    float:left !important;
+    height: 80px;
+}
+.woocommerce a.remove {
+    display: block;
+    font-size: 1.5em;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 100%;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+}
+
+.woocommerce a.remove:hover {
+    color: #0b0a0a !important;
+    background: #fff;
+}
+
+.widget_shopping_cart_content li.mini_cart_item a.remove_from_cart_button {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    background: #00000014;
+    border-radius: 50% !important;
+    padding: 0 8px;
+    /*color: var(--pfontcolor) !important;*/
+    font-weight: 300 !important;
+}
+.widget_shopping_cart_content li.mini_cart_item a.remove_from_cart_button:hover {
+    background: rgba(121, 117, 117, 0.08) !important;
+    color:#00000014 !important;
+}
+.woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a {
+    display: block;
+    font-weight: 400;
+}
+.widget_shopping_cart_content span.quantity{
+    display:block;
+    font-size: 14px;
+    /*color: var(--afontcolor1);*/
+}
+.widget_shopping_cart_content ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight:bold !important;
+}
+.widget_shopping_cart_content:before {
+    position: absolute;
+    top: 7px;
+    right: 54px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid red;
+    border-bottom-color: #ffffff;
+    content: '';
+}
+.woocommerce-mini-cart__buttons a.button:hover{
+
+    color:#fff;
+}
+.woocommerce-mini-cart__buttons a.button{
+    background: #21372cff;
+    padding: 8px 15px;
+    color: #fff;
+    margin-right: 18px;
+    font-weight:200;
+}
+.cart-mini .mini-wrapper{
+    opacity:0;
+    display:none;
+    transition: all 0.3s;
+    width: 271px;
+
+}
+
+.cart-mini.active .mini-wrapper{
+    display:block;
+    opacity:1;
+}
+.cart-mini:hover .mini-wrapper,.cart-mini:active .mini-wrapper,.cart-mini:focus .mini-wrapper{
+    display:block;
+    opacity:1;
+}
+/* ---------------------------------------------------
+    Single Product page
+----------------------------------------------------- */
+.single .woocommerce div.product .product_title{
+    font-size:35px;
+}
+.single .woocommerce div.product p.price, .woocommerce div.product span.price {
+    color: #a34301;
+    font-size: 1.25em;
+}
+.single .woocommerce-product-details__short-description p,.single .qtd{
+    font-size:21px;
+    letter-spacing: 1px;
+    font-family:'Recursive';
+
+}
+.single .qtd{
+    color:#7a7a7aff;
+}
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: #a34301;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: #994912;
+    color: #fff;
+}
+.single .woocommerce .quantity .qty {
+    width: 3.631em;
+    text-align: center;
+    height: 42px;
+}
+.single #qty-minus,.single #qty-plus{
+    border: 1px solid #7a7a7aff;
+    margin: 0;
+    padding:11px;
+}
+.single #qty-minus{
+    border-right:unset;
+}
+.single .quantity .qty {
+    width: 3.631em;
+    text-align: center;
+    height: 42px;
+    margin: -5px;
+}
+.single div.product form.cart div.quantity {
+    float: left;
+    margin: 5px 4px 0 0;
+}
+.single div.product form.cart .button {
+    padding: 14px 29px;
+    margin-left: 12px;
+    border-radius: 0;
+}
+.single div.product p.price, .woocommerce div.product span.price {
+    color: #a34301;
+    font-size: 1.25em;
+}
+.single main > .product{
+    padding: 0;
+}
+.single .wc-tabs-wrapper {
+    background: url(assets/images/single-bg.png);
+    background-size: cover;
+    padding: 65px;
+}
+.single .wc-tabs-wrapper .product-tab-wrapper{
+    text-align:  center;
+}
+.single div.product .woocommerce-tabs ul.tabs::before{
+    border:unset;
+}
+.single div.product .woocommerce-tabs ul.tabs li::before,.single div.product .woocommerce-tabs ul.tabs li::after{
+    left:unset;
+    border:unset;
+    box-shadow:unset;
+}
+.single div.product .woocommerce-tabs ul.tabs li.active,.single div.product .woocommerce-tabs ul.tabs li {
+    border-radius: unset;
+}
+.single div.product .woocommerce-tabs ul.tabs li{
+    background: transparent;
+}
+.single div.product .woocommerce-tabs ul.tabs li a{
+    color:#fff;
+    padding: 10px 23px;
+}
+.single div.product .woocommerce-tabs .panel {
+    margin:auto;
+    padding: 0;
+    width: 71%;
+    text-align: center;
+    color: #fff;
+}
+.single .related.products{
+    padding:47px;
+    text-align:center;
+}
+.single .related.products h2{
+    margin-bottom:47px;
+}

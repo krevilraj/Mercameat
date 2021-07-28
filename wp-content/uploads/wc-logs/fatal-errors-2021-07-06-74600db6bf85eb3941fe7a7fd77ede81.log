@@ -1,0 +1,38 @@
+2021-07-06T12:35:29+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($function) must be a valid callback, function "nav-link" not found or invalid function name in /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-hook.php:294
+Stack trace:
+#0 /Applications/MAMP/htdocs/mercameat/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#1 /Applications/MAMP/htdocs/mercameat/wp-includes/class-walker-nav-menu.php(202): apply_filters('nav_menu_link_a...', Array, Object(WP_Post), Object(stdClass), 0)
+#2 /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-walker.php(144): Walker_Nav_Menu->start_el('<li id="menu-it...', Object(WP_Post), 0, Object(stdClass))
+#3 /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-walker.php(244): Walker->display_element(Object(WP_Post), Array, 0, 0, Array, '<li id="menu-it...')
+#4 /Applications/MAMP/htdocs/mercameat/wp-includes/nav-menu-template.php(608): Walker->walk(Array, 0, Object(stdClass))
+#5 /Applications/MAMP/htdocs/mercameat/wp-includes/nav-menu-template.php(228): walk_nav_menu_tree(Array, 0, Object(stdClass))
+#6 /Applications/MAMP/htdocs/mercameat/wp-content/themes/mercameat/header.php(56): wp_nav_menu(Object(stdClass))
+#7 /Applications/MAMP/htdocs/mercameat/wp-includes/template.php(730): require_once('/Applications/M...')
+#8 /Applications/MAMP/htdocs/mercameat/wp-includes/template.php(676): load_template('/Applications/M...', true, Array)
+#9 /Applications/MAMP/htdocs/mercameat/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#10 /Applications/MAMP/htdocs/mercameat/wp-content/themes/mercameat/template-home.php(7): get_header()
+#11 /Applications/MAMP/htdocs/mercameat/wp-includes/template-loader.php(106): include('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mercameat/wp-blog-header.php(19): require_once('/Applications/M...')
+#13 /Applications/MAMP/htdocs/mercameat/index.php(17): require('/Applications/M...')
+#14 {main}
+  thrown in /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-hook.php on line 294
+
+2021-07-06T12:35:39+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($function) must be a valid callback, function "nav-link" not found or invalid function name in /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-hook.php:294
+Stack trace:
+#0 /Applications/MAMP/htdocs/mercameat/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#1 /Applications/MAMP/htdocs/mercameat/wp-includes/class-walker-nav-menu.php(202): apply_filters('nav_menu_link_a...', Array, Object(WP_Post), Object(stdClass), 0)
+#2 /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-walker.php(144): Walker_Nav_Menu->start_el('<li id="menu-it...', Object(WP_Post), 0, Object(stdClass))
+#3 /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-walker.php(244): Walker->display_element(Object(WP_Post), Array, 0, 0, Array, '<li id="menu-it...')
+#4 /Applications/MAMP/htdocs/mercameat/wp-includes/nav-menu-template.php(608): Walker->walk(Array, 0, Object(stdClass))
+#5 /Applications/MAMP/htdocs/mercameat/wp-includes/nav-menu-template.php(228): walk_nav_menu_tree(Array, 0, Object(stdClass))
+#6 /Applications/MAMP/htdocs/mercameat/wp-content/themes/mercameat/header.php(56): wp_nav_menu(Object(stdClass))
+#7 /Applications/MAMP/htdocs/mercameat/wp-includes/template.php(730): require_once('/Applications/M...')
+#8 /Applications/MAMP/htdocs/mercameat/wp-includes/template.php(676): load_template('/Applications/M...', true, Array)
+#9 /Applications/MAMP/htdocs/mercameat/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#10 /Applications/MAMP/htdocs/mercameat/wp-content/themes/mercameat/template-home.php(7): get_header()
+#11 /Applications/MAMP/htdocs/mercameat/wp-includes/template-loader.php(106): include('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mercameat/wp-blog-header.php(19): require_once('/Applications/M...')
+#13 /Applications/MAMP/htdocs/mercameat/index.php(17): require('/Applications/M...')
+#14 {main}
+  thrown in /Applications/MAMP/htdocs/mercameat/wp-includes/class-wp-hook.php on line 294
+

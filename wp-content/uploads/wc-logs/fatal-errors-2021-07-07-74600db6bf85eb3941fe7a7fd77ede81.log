@@ -1,0 +1,2 @@
+2021-07-07T13:35:00+00:00 CRITICAL Cannot redeclare crispshop_scripts() (previously declared in /Applications/MAMP/htdocs/mercameat/wp-content/themes/mercameat/functions.php:459) in /Applications/MAMP/htdocs/mercameat/wp-content/themes/mercameat/inc/woocommerce/addtocart/addtocart.php on line 3
+
